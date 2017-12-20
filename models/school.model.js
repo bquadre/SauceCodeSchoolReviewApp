@@ -12,6 +12,10 @@ const SchoolSchema = mongoose.Schema({
     email: {type: String, required: true },
     phone: {type: Number, required: true },
     website: {type: String, required: true },
+    likes: {type: Number,  required: false},
+    facebook: {type: String, requied: false},
+    twitter: {type: String, requied: false},
+    type: {type: String, required: true},
     comments: [
         {
             comment: String,
