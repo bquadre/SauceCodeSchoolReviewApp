@@ -5,7 +5,7 @@ const SchoolSchema = mongoose.Schema({
     name: {type: String, required: true},
     fees: {type: String, required: true},
     location: {type: String, required: true},
-    motto: {type: String, required: true},
+    description: {type: String, required: true},
     reviews: {type: Number, required: false, default: 0},
     stars: {type: Number, required: false, default: 0},
     accepted: {type: Boolean, default: false},

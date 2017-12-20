@@ -18,9 +18,6 @@ export default class SchoolController {
                 res.status(500).send(err)
             }
             if (schools) {
-                if(schools.accepted === false){
-                    console.log('please chill till this school has been accepted by the admin')
-                }
                 res.status(200)
                 .render('single-school', {title: schools.name, schools });
             } else {
@@ -42,12 +39,14 @@ export default class SchoolController {
                                     name: req.body.name, 
                                     fees: req.body.fees, 
                                     location: req.body.location,
-                                    motto: req.body.motto,
+                                    description: req.body.description,
                                     email: req.body.email,
                                     website: req.body.website,
                                     phone: req.body.phone,
+                                    type: req.body.type,
+                                    twitter: req.body.twitter,
+                                    facebook: req.body.facebook
                                 });
-        school.facilities.push(req.body.facilities)
         school.save((err, data) => {
             console.log(data);
         if(err) {
@@ -75,17 +74,13 @@ export default class SchoolController {
                         comment: req.body.comment,
                         star: req.body.star
                     }
-                let issues = {
-                    title: req.body.title,
-                    issue: req.body.issue
-                }
                     school.title = school.name;
-                    school.motto = school.motto;
+                    school.description = school.description;
                     school.fees = school.fees;
                     school.comments.push(comments);
                     school.stars = Math.round(total);
                     school.reviews = school.comments.length
-                    school.issues.push(issues)
+                    school.type = school.type;
                     // Save the updated document back to the database
                     school.save((err, school) => {
                         if (err) {
@@ -127,16 +122,17 @@ export default class SchoolController {
             }
             if (school) {
                     school.name = school.name;
-                    school.motto = school.motto;
+                    school.description = school.description;
                     school.fees = school.fees;
                     school.comments = school.comments;
                     school.stars = school.stars;
                     school.reviews = school.reviews;
                     school.accepted = req.body.accepted;
-                    school.facilities = school.facilities;
                     school.email = school.email;
-                    school.issues = school.issues;
                     school.website = school.website;
+                    school.facebook = school.facebook;
+                    school.twitter = school.twitter;
+                    school.type = school.type;
                     // Save the updated document back to the database
                     school.save((err, school) => {
                         if (err) {
