@@ -1,0 +1,42 @@
+{
+  "name": "goodschools",
+  "version": "1.0.0",
+  "description": "Website for randomly reviewing schools.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-watch app.js --require babel-register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leksyib/GoodSchools.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leksyib/GoodSchools/issues"
+  },
+  "homepage": "https://github.com/leksyib/GoodSchools#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "babel-watch": "^2.0.7",
+    "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^2.0.0",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "handlebars": "^4.0.11",
+    "hbs": "^4.0.1",
+    "mongoose": "^4.13.7",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.4.0",
+    "path": "^0.12.7"
+  }
+}
