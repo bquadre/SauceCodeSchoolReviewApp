@@ -6,7 +6,6 @@ const schoolroute = new SchoolController.default();
 const adminCont = new AdminController.default();
 
 appRouter.get('/', schoolroute.getAllSchools);
-appRouter.get('/new', schoolroute.newSchool)
 appRouter.get('/schools', schoolroute.getAllSchools);
 appRouter.post('/schools', schoolroute.addNewSchool);
 appRouter.delete('/schools/:SchoolId', schoolroute.deleteSchool);
@@ -14,6 +13,6 @@ appRouter.post('/schools/:SchoolId', schoolroute.addComment);
 appRouter.get('/schools/:SchoolId', schoolroute.getOneSchoolById);
 appRouter.post('/registerAdmin', adminCont.addAdmin);
 appRouter.post('/login', adminCont.login);
-appRouter.post('/schools/v1/:SchoolId', schoolroute.acceptSchool);
-appRouter.post('/schools/v2/:SchoolId', schoolroute.likeSchool);
+appRouter.post('/admin/schools/:SchoolId', schoolroute.acceptSchool);
+appRouter.post('/search', schoolroute.searchSchool)
 export default appRouter;

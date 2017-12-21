@@ -116,9 +116,6 @@ export default class SchoolController {
             }
         });
     };
-    newSchool(req, res){
-        res.render('new', {title: 'New'})
-    }
 
     acceptSchool(req, res){
         School.findById(req.params.SchoolId, (err, school) => {  
@@ -154,38 +151,8 @@ export default class SchoolController {
             }
         });
     }
-    likeSchool(req, res) {
-        School.findById(req.params.SchoolId, (err, school) => {  
-            if (err) {
-                res.status(500).send(err)
-            }
-            if (school) {
-                    school.name = school.name;
-                    school.description = school.description;
-                    school.fees = school.fees;
-                    school.comments = school.comments;
-                    school.stars = school.stars;
-                    school.reviews = school.reviews;
-                    school.accepted = req.body.accepted;
-                    school.email = school.email;
-                    school.website = school.website;
-                    school.facebook = school.facebook;
-                    school.twitter = school.twitter;
-                    school.type = school.type;
-                    // Save the updated document back to the database
-                    school.save((err, school) => {
-                        if (err) {
-                            res.status(500)
-                            console.log(err);
-                        }
-                    console.log(school)
-                    //res.redirect(`/schools/${school._id}`);
-                    });
-            } else {
-                res
-                .status(404)
-                .send("No School found with that ID");
-            }
-        });
+
+    searchSchool(req, res){
+        
     }
 }
