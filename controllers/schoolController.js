@@ -5,9 +5,11 @@ export default class SchoolController {
         // Retrieve and return all schools from the database.
         School.find((err, schools) => {
             if(err) {
-                res.status(500).send({message: "Some error occurred while retrieving schools."});
+                res.status(500)
+                    .send({message: "Some error occurred while retrieving schools."})
+                    .redirect('index');
             } else {
-                res.render('index', {title: 'GoodSchools', schools});
+                res.render('index', {schools});
                 console.log(schools)
             }
         });
@@ -46,7 +48,8 @@ export default class SchoolController {
                                     phone: req.body.phone,
                                     type: req.body.type,
                                     twitter: req.body.twitter,
-                                    facebook: req.body.facebook
+                                    facebook: req.body.facebook,
+                                    address: req.body.address
                                 });
         school.save((err, data) => {
             console.log(data);
@@ -54,7 +57,7 @@ export default class SchoolController {
                 console.log(err);
                 res
                     .status(500)
-                    .send({message: "Some error occurred while creating the School."});
+                    .send('message: "Some error occurred while creating the School."');
             } else {
                 res.redirect(`/schools/${data._id}`);
             }
@@ -72,6 +75,7 @@ export default class SchoolController {
                     total+= comment.star/school.comments.length;
                 })
                 let comments = {
+                        name: req.body.name,
                         comment: req.body.comment,
                         star: req.body.star
                     }

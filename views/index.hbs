@@ -18,13 +18,13 @@
 
     <!--stylesheets-->
 
-    <link rel="stylesheet" href="3rdparty/css/bootstrap.min.css">
-    <link rel="stylesheet" href="3rdparty/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="3rdparty/css/animate.min.css">
-    <link rel="stylesheet" href="3rdparty/jquery-nice-select-1.1.0/css/nice-select.css">
-    <link rel="stylesheet" href="3rdparty/OwlCarousel2-2.2.1/owl.carousel.min.css">
-    <link rel="stylesheet" href="3rdparty/OwlCarousel2-2.2.1/owl.theme.green.min.css">
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="/3rdparty/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/3rdparty/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/3rdparty/css/animate.min.css">
+    <link rel="stylesheet" href="/3rdparty/jquery-nice-select-1.1.0/css/nice-select.css">
+    <link rel="stylesheet" href="/3rdparty/OwlCarousel2-2.2.1/owl.carousel.min.css">
+    <link rel="stylesheet" href="/3rdparty/OwlCarousel2-2.2.1/owl.theme.green.min.css">
+    <link rel="stylesheet" href="/css/app.css">
 
     <!--end stylesheets-->
 
@@ -51,84 +51,84 @@
                         <div class="form-tabs">
                             <a href="#" data-frm="login-frm" class="tab active">Kindly Fill the Form Below</a>
                         </div>
-                        <form class="login-frm frm" action="#" method="post">
+                        <form class="login-frm frm" action="/schools" method="post">
                             <div class="form-group">
                                 <label for="email1">Name of School:</label>
-                                <input type="text" required name="name" autocomplete="email" id="#">
+                                <input required type="text" required name="name" autocomplete="email" id="#">
                             </div>
                             <div class="form-group">
                                 <label for="location">Upload Image</label>
                                 <input type="file" name="myfile" />
                             </div>
                             <div class="form-group">
-                                    <label for="email">Your Email Address:</label>
-                                    <input type="email" required name="email" autocomplete="email" id="#">
-                            </div>
-                            <div class="form-group">
                                 <label for="pass1">Type of Institution</label>
                                 <div class="sel">
-                                        <select title="Service" class="wide">
+                                        <select name="type" title="Service" class="wide">
                                             <option selected >Select Institution Type</option>
-                                            <option data-display="Select">Nursery & Primary School</option>
-                                            <option value="1">Secondary School</option>
-                                            <option value="2">Higher Institution</option>
-                                            <option value="3">Others</option>
+                                            <option data-display="Select" value="Nursey & Primary school" >Nursery & Primary School</option>
+                                            <option value="Secondary School">Secondary School</option>
+                                            <option value="Higher Institution">Higher Institution</option>
+                                            <option value="others">Others</option>
                                         </select>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="email1">Address:</label>
-                                <input type="text" required name="address" autocomplete="email" id="#">
+                                <input required type="text" required name="address" autocomplete="email" id="#">
+                            </div>
+                            <div class="form-group">
+                                <label for="email1">Average Fees:</label>
+                                <input placeholder="90,000" required type="text" required name="fees" autocomplete="email" id="#">
                             </div>
                             <div class="form-group">
                                     <label for="email1">Location</label>
                                     <div class="sel">
-                                        <select title="Service" class="wide">
-                                            <option selected >Select a State</option>
-                                            <option data-display="Select">Abia</option>
-                                            <option value="#">Adamawa</option>
-                                            <option value="#">Anambra</option>
-                                            <option value="#">Akwa Ibom</option>
-                                            <option value="#">Bauchi</option>
-                                            <option value="#">Bayelsa</option>
-                                            <option value="#">Benue</option>
-                                            <option value="#">Borno</option>
-                                            <option value="#">Cross River</option>
-                                            <option value="#">Delta</option>
-                                            <option value="#">Ebonyi</option>
-                                            <option value="#">Enugu</option>
-                                            <option value="#">Edo</option>
-                                            <option value="#">Ekiti</option>
-                                            <option value="#">Gombe</option>
-                                            <option value="#">Imo</option>
-                                            <option value="#">Jigawa</option>
-                                            <option value="#">Kaduna</option>
-                                            <option value="#">Kano</option>
-                                            <option value="#">Katsina</option>
-                                            <option value="#">Kebbi</option>
-                                            <option value="#">Kogi</option>
-                                            <option value="#">Kwara</option>
-                                            <option value="#">Lagos</option>
-                                            <option value="#">Nasarawa</option>
-                                            <option value="#">Niger</option>
-                                            <option value="#">Ogun</option>
-                                            <option value="#">Ondo</option>
-                                            <option value="#">Osun</option>
-                                            <option value="#">Oyo</option>
-                                            <option value="#">Plateau</option>
-                                            <option value="#">Rivers</option>
-                                            <option value="#">Sokoto</option>
-                                            <option value="#">Taraba</option>
-                                            <option value="#">Yobe</option>
-                                            <option value="#">Zamfara</option>
-                                            <option value="#">Abuja - FCT </option>
+                                        <select name="location" title="Service" class="wide">
+                                            <option >Select a State</option>
+                                            <option value="Abia">Abia</option>
+                                            <option value="Adamawa">Adamawa</option>
+                                            <option value="Anambra">Anambra</option>
+                                            <option value="Akwa Ibom">Akwa Ibom</option>
+                                            <option value="Bauchi">Bauchi</option>
+                                            <option value="Bayelsa">Bayelsa</option>
+                                            <option value="Benue">Benue</option>
+                                            <option value="Borno">Borno</option>
+                                            <option value="Cross River">Cross River</option>
+                                            <option value="Delta">Delta</option>
+                                            <option value="Ebonyi">Ebonyi</option>
+                                            <option value="Enugu">Enugu</option>
+                                            <option value="Edo">Edo</option>
+                                            <option value="Ekiti">Ekiti</option>
+                                            <option value="Gombe">Gombe</option>
+                                            <option value="Imo">Imo</option>
+                                            <option value="Jigawa">Jigawa</option>
+                                            <option value="Kaduna">Kaduna</option>
+                                            <option value="Kano">Kano</option>
+                                            <option value="Katsina">Katsina</option>
+                                            <option value="Kebbi">Kebbi</option>
+                                            <option value="Kogi">Kogi</option>
+                                            <option value="Kwara">Kwara</option>
+                                            <option value="Lagos">Lagos</option>
+                                            <option value="Nasarawa">Nasarawa</option>
+                                            <option value="Niger">Niger</option>
+                                            <option value="Ogun">Ogun</option>
+                                            <option value="Ondo">Ondo</option>
+                                            <option value="Osun<">Osun</option>
+                                            <option value="Oyo">Oyo</option>
+                                            <option value="Plateau">Plateau</option>
+                                            <option value="Rivers">Rivers</option>
+                                            <option value="Sokoto">Sokoto</option>
+                                            <option value="Taraba">Taraba</option>
+                                            <option value="Yobe">Yobe</option>
+                                            <option value="Zamfara">Zamfara</option>
+                                            <option value="Abuja - FCT">Abuja - FCT </option>
 
                                         </select>
                                     </div>
                             </div>
                             <div class="form-group">
                                 <label for="message">School's Description:</label>
-                                <textarea class="form-control">Enter Details for school here</textarea>
+                                <textarea name="description" placeholder="Enter Details for school here" class="form-control"></textarea>
                             </div>
                             <br>
                             <hr>
@@ -137,15 +137,15 @@
                             </div>
                             <div class="form-group">
                                 <label for="email1">Schools Email:</label>
-                                <input type="email" name="email" autocomplete="email" id="email1">
+                                <input required type="email" name="email" autocomplete="email" id="email1">
                             </div>
                             <div class="form-group">
                                 <label for="email1">Schools Number:</label>
-                                <input type="text" name="schnum" autocomplete="email" id="email1">
+                                <input required type="text" name="phone" autocomplete="email" id="email1">
                             </div>
                            <br>
                             <div class="sub-btn">
-                                <input type="submit" class="btn ui-btn info" value="SUBMIT FOR REVIEW">
+                                <input required type="submit" class="btn ui-btn info" value="SUBMIT FOR REVIEW">
                             </div>
                         </form>
                     </div>
@@ -205,7 +205,7 @@
     <div class="row">
         <div class="col-lg-4 col-md-4">
             <div class="connect-img">
-                <img src="img/edit.jpg" alt="">
+                <img src="/img/edit.jpg" alt="">
             </div>
         </div>
         <div class="col-lg-8 col-md-8">
@@ -239,7 +239,7 @@
             <div class="user-card">
                 <div class="top">
                     <div class="user-photo">
-                        <div><img src="img/avatar.jpg" alt=""></div>
+                        <div><img src="/img/avatar.jpg" alt=""></div>
                         <span><i class="fa fa-star text-rose"></i></span>
                     </div>
                     <div class="user-details">
@@ -283,7 +283,7 @@
             <div class="user-card">
                 <div class="top">
                     <div class="user-photo">
-                        <div><img src="img/user2.jpg" alt=""></div>
+                        <div><img src="/img/user2.jpg" alt=""></div>
                         <span><i class="fa fa-star text-rose"></i></span>
                     </div>
                     <div class="user-details">
@@ -326,7 +326,7 @@
             <div class="user-card">
                 <div class="top">
                     <div class="user-photo">
-                        <div><img src="img/avatar2.jpg" alt=""></div>
+                        <div><img src="/img/avatar2.jpg" alt=""></div>
                         <span><i class="fa fa-star"></i></span>
                     </div>
                     <div class="user-details">
