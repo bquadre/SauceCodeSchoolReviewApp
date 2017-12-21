@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><head>
+
+    <!--meta tags-->
+
+    <meta charset="UTF-8">
+    <meta name="description" content="School Review App">
+    <meta name="keywords" content="school, review">
+    <meta name="author" content="SauceCode">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--end meta tags-->
+
+    <title>School Review</title>
+
+    <!--stylesheets-->
+
+    <link rel="stylesheet" href="3rdparty/css/bootstrap.min.css">
+    <link rel="stylesheet" href="3rdparty/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="3rdparty/css/animate.min.css">
+    <link rel="stylesheet" href="3rdparty/jquery-nice-select-1.1.0/css/nice-select.css">
+    <link rel="stylesheet" href="3rdparty/OwlCarousel2-2.2.1/owl.carousel.min.css">
+    <link rel="stylesheet" href="3rdparty/OwlCarousel2-2.2.1/owl.theme.green.min.css">
+    <link rel="stylesheet" href="3rdparty/perfect-scrollbar/css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <!--end stylesheets-->
+
+    <!--google fonts-->
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:700|Raleway|Tangerine" rel="stylesheet">
+    <!--end google fonts-->
+
+</head>
+<body>
+
+
+
+<!--top navbar-->
+<nav class="ui-nav">
+        <div class="logo"><a href="index.html">School Review</a></div>
+        <div class="start-here">
+                <a href="list.html" class="btn ui-btn info">See other Listings</a>
+        </div>
+        <i class="fa fa-bars open-menu"></i>
+    </nav>
+<!--end top navbar-->
+
+<div class="content-wrapper">
+
+    <!--form-->
+    <div class="container">
+        <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <form action="#" method="post"><br>
+                <h4 align="center">Kindly fill the form below</h4>
+                <div class="form-group">
+                        <label for="email1">Name of School:</label>
+                        <input type="text" required name="name" autocomplete="email" id="#">
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Upload Image</label>
+                        <input type="file" name="myfile" />
+                    </div>
+                    <div class="form-group">
+                            <label for="email">Your Email Address:</label>
+                            <input type="email" required name="email" autocomplete="email" id="#">
+                    </div>
+                    <div class="form-group">
+                            <label for="pass1">Type of Institution</label>
+                            <div class="sel">
+                                    <select title="Service" class="wide">
+                                        <option selected >Select Institution Type</option>
+                                        <option data-display="Select">Nursery & Primary School</option>
+                                        <option value="1">Secondary School</option>
+                                        <option value="2">Higher Institution</option>
+                                        <option value="3">Others</option>
+                                    </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email1">Address:</label>
+                            <input type="text" required name="address" autocomplete="email" id="#">
+                        </div>
+                        <div class="form-group">
+                                <label for="email1">Location</label>
+                                <div class="sel">
+                                    <select title="Service" class="wide">
+                                        <option selected >Select a State</option>
+                                        <option data-display="Select">Abia</option>
+                                        <option value="#">Adamawa</option>
+                                        <option value="#">Anambra</option>
+                                        <option value="#">Akwa Ibom</option>
+                                        <option value="#">Bauchi</option>
+                                        <option value="#">Bayelsa</option>
+                                        <option value="#">Benue</option>
+                                        <option value="#">Borno</option>
+                                        <option value="#">Cross River</option>
+                                        <option value="#">Delta</option>
+                                        <option value="#">Ebonyi</option>
+                                        <option value="#">Enugu</option>
+                                        <option value="#">Edo</option>
+                                        <option value="#">Ekiti</option>
+                                        <option value="#">Gombe</option>
+                                        <option value="#">Imo</option>
+                                        <option value="#">Jigawa</option>
+                                        <option value="#">Kaduna</option>
+                                        <option value="#">Kano</option>
+                                        <option value="#">Katsina</option>
+                                        <option value="#">Kebbi</option>
+                                        <option value="#">Kogi</option>
+                                        <option value="#">Kwara</option>
+                                        <option value="#">Lagos</option>
+                                        <option value="#">Nasarawa</option>
+                                        <option value="#">Niger</option>
+                                        <option value="#">Ogun</option>
+                                        <option value="#">Ondo</option>
+                                        <option value="#">Osun</option>
+                                        <option value="#">Oyo</option>
+                                        <option value="#">Plateau</option>
+                                        <option value="#">Rivers</option>
+                                        <option value="#">Sokoto</option>
+                                        <option value="#">Taraba</option>
+                                        <option value="#">Yobe</option>
+                                        <option value="#">Zamfara</option>
+                                        <option value="#">Abuja - FCT </option>
+
+                                    </select>
+                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">School's Description:</label>
+                            <textarea class="form-control">Enter Details for school here</textarea>
+                        </div>
+                        <br>
+                        <hr>
+                        <div class="form-tabs">
+                            <a href="#" data-frm="register-frm" class="tab">Other Details</a>
+                        </div>
+                        <div class="form-group">
+                            <label for="email1">Schools Email:</label>
+                            <input type="email" name="email" autocomplete="email" id="email1">
+                        </div>
+                        <div class="form-group">
+                            <label for="email1">Schools Number:</label>
+                            <input type="text" name="schnum" autocomplete="email" id="email1">
+                        </div>
+                       <br>
+                        <div class="sub-btn">
+                            <input type="submit" class="btn ui-btn info text-white" value="SUBMIT FOR REVIEW">
+                        </div>
+            </form>
+        </div><div class="col-md-2"></div></div>
+    </div>
+    <!-- form-->
+
+</div>
+
+
+<script src="3rdparty/js/jquery-3.2.1.min.js"></script>
+<script src="3rdparty/js/popper.js"></script>
+<script src="3rdparty/js/bootstrap.js"></script>
+<script src="3rdparty/jquery-nice-select-1.1.0/js/jquery.nice-select.js"></script>
+<script src="3rdparty/OwlCarousel2-2.2.1/owl.carousel.min.js"></script>
+<script src="3rdparty/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
+<script src="js/app.js"></script>
+
+
+</body>
+</html>
