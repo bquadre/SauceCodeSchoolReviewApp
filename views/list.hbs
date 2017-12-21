@@ -14,7 +14,7 @@
 
     <!--end meta tags-->
 
-    <title>School Review</title>
+    <title>{{title}}</title>
 
     <!--stylesheets-->
 
@@ -38,13 +38,9 @@
 
 <!--top navbar-->
 <nav class="ui-nav">
-    <div class="logo"><a href="index.html">School Review</a></div>
+    <div class="logo"><a href="/">School Review</a></div>
     <div class="start-here">
-<<<<<<< HEAD
-            <a href="addnew.html" class="btn ui-btn info">Add New School</a>
-=======
             <a href="#" class="btn ui-btn info">Add New School</a>
->>>>>>> parent of ecd1ab7... Completed modal for adding schools
     </div>
     <i class="fa fa-bars open-menu"></i>
 </nav>
@@ -54,9 +50,10 @@
 
     <!--banner-->
     <div class="listings-banner">
+        <form action="/search">
             <div class="select-fields">
                     <div class="sel">
-                        <select title="Service" class="wide">
+                        <select name="type" title="Service" class="wide">
                             <option selected >Select Institution Type</option>
                             <option data-display="Select">Nursery & Primary School</option>
                             <option value="1">Secondary Schools</option>
@@ -66,58 +63,81 @@
                         </select>
                     </div>
                     <div class="sel">
-                        <select title="Service" class="wide">
-                            <option selected >Select City</option>
-                            <option data-display="Select">Abuja</option>
-                            <option value="1">Lagos</option>
-                            <option value="2">Benin</option>
-                            <option value="3" disabled>Ibadan</option>
-                            <option value="4">All</option>
+                        <select name="location" title="Service" class="wide">
+                           <option >Select a State</option>
+                                            <option value="Abia">Abia</option>
+                                            <option value="Adamawa">Adamawa</option>
+                                            <option value="Anambra">Anambra</option>
+                                            <option value="Akwa Ibom">Akwa Ibom</option>
+                                            <option value="Bauchi">Bauchi</option>
+                                            <option value="Bayelsa">Bayelsa</option>
+                                            <option value="Benue">Benue</option>
+                                            <option value="Borno">Borno</option>
+                                            <option value="Cross River">Cross River</option>
+                                            <option value="Delta">Delta</option>
+                                            <option value="Ebonyi">Ebonyi</option>
+                                            <option value="Enugu">Enugu</option>
+                                            <option value="Edo">Edo</option>
+                                            <option value="Ekiti">Ekiti</option>
+                                            <option value="Gombe">Gombe</option>
+                                            <option value="Imo">Imo</option>
+                                            <option value="Jigawa">Jigawa</option>
+                                            <option value="Kaduna">Kaduna</option>
+                                            <option value="Kano">Kano</option>
+                                            <option value="Katsina">Katsina</option>
+                                            <option value="Kebbi">Kebbi</option>
+                                            <option value="Kogi">Kogi</option>
+                                            <option value="Kwara">Kwara</option>
+                                            <option value="Lagos">Lagos</option>
+                                            <option value="Nasarawa">Nasarawa</option>
+                                            <option value="Niger">Niger</option>
+                                            <option value="Ogun">Ogun</option>
+                                            <option value="Ondo">Ondo</option>
+                                            <option value="Osun<">Osun</option>
+                                            <option value="Oyo">Oyo</option>
+                                            <option value="Plateau">Plateau</option>
+                                            <option value="Rivers">Rivers</option>
+                                            <option value="Sokoto">Sokoto</option>
+                                            <option value="Taraba">Taraba</option>
+                                            <option value="Yobe">Yobe</option>
+                                            <option value="Zamfara">Zamfara</option>
+                                            <option value="Abuja - FCT">Abuja - FCT </option>
                         </select>
                     </div>
                     <button class="btn ui-btn dark-blue">Search</button>
                 </div>
+                </form>
     </div>
     <!--end banner-->
 
     <!--listings-->
     <div class="listings">
         <div class="row">
+            {{#each results}}
             <div class="col-lg-9 col-md-12">
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <div class="listing-item">
                             <div class="cover-img">
                                 <img src="img/cooker2.jpg" alt="">
-                                <div class="cover-hover">
-                                    <!-- <div class="share-like">
-                                        <a href="#" title="Like"><i class="fa fa-eye"></i></a>
-                                        <a href="#" title="Share"><i class="fa fa-heart"></i></a>
-                                        <a href="#" title="Bookmark"><i class="fa fa-pencil-square-o"></i></a>
-                                    </div> -->
-                                </div>
                             </div>
                             <div class="listing-info">
                                 <div class="details">
-                                    <strong>FUT Minna -></strong>
-                                    <span>Higher Institution</span>
+                                    <strong> {{name}} </strong>
+                                    <span> {{type}} </span>
                                     <p>
-                                        Vice eiusmod authentic forage mustache try-hard proident
-                                        aesthetic...<a href="details.html">Read More...</a>
+                                        {{description}}
+                                        <a href="/schools/{{_id}}">Read More...</a>
                                     <hr></p>
-                                    <i class="fa fa-map-marker text-info"></i> <em>Minna</em>
+                                    <i class="fa fa-map-marker text-info"></i> <em> {{location}} </em>
                                     <div class="user-counts">
                                             <div class="count-item">
                                                 <i class="fa fa-eye text-info"></i>
-                                                <strong>1241</strong>
-                                            </div>
-                                            <div class="count-item">
-                                                <i class="fa fa-heart text-mayan"></i>
-                                                <strong>786</strong>
+                                                <strong> {{reviews}} </strong>
                                             </div>
                                             <div class="count-item">
                                                 <i class="fa fa-pencil-square-o text-rose"></i>
-                                                <strong>569</strong>
+                                                <strong> {{comments.length}} </strong>
                                             </div>
                                     </div>
                                 </div>
@@ -128,90 +148,15 @@
                                         <i class="fa fa-star yel"></i>
                                         <i class="fa fa-star-half-empty"></i>
                                         <i class="fa fa-star-o yel"></i>
-                                        <span>(4.4/345 Reviews)</span>
+                                        <span>({{reviews}} Reviews)</span>
                                     </div>
-                                    <a href="details.html">View <i class="fa fa-angle-right"></i></a>
+                                    <a href="/schools/{{_id}}">View <i class="fa fa-angle-right"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                            <div class="listing-item">
-                                <div class="cover-img">
-                                    <img src="img/cooker2.jpg" alt="">
-                                    <div class="cover-hover">
-                                        <!-- <div class="share-like">
-                                            <a href="#" title="Like"><i class="fa fa-eye"></i></a>
-                                            <a href="#" title="Share"><i class="fa fa-heart"></i></a>
-                                            <a href="#" title="Bookmark"><i class="fa fa-pencil-square-o"></i></a>
-                                        </div> -->
-                                    </div>
-                                </div>
-                                <div class="listing-info">
-                                    <div class="details">
-                                        <strong>FUT Minna -></strong>
-                                        <span>Higher Institution</span>
-                                        <p>
-                                            Vice eiusmod authentic forage mustache try-hard proident
-                                            aesthetic...<a href="details.html">Read More...</a>
-                                        <hr></p>
-                                        <i class="fa fa-map-marker text-info"></i> <em>Minna</em>
-                                        <div class="user-counts">
-                                                <div class="count-item">
-                                                    <i class="fa fa-eye text-info"></i>
-                                                    <strong>1241</strong>
-                                                </div>
-                                                <div class="count-item">
-                                                    <i class="fa fa-heart text-mayan"></i>
-                                                    <strong>786</strong>
-                                                </div>
-                                                <div class="count-item">
-                                                    <i class="fa fa-pencil-square-o text-rose"></i>
-                                                    <strong>569</strong>
-                                                </div>
-                                        </div>
-                                    </div>
-                                    <div class="bottom-details">
-                                        <div class="rating-stars">
-                                            <i class="fa fa-star yel"></i>
-                                            <i class="fa fa-star yel"></i>
-                                            <i class="fa fa-star yel"></i>
-                                            <i class="fa fa-star-half-empty"></i>
-                                            <i class="fa fa-star-o yel"></i>
-                                            <span>(4.4/345 Reviews)</span>
-                                        </div>
-                                        <a href="details.html">View <i class="fa fa-angle-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-                    </div>
             </div>
-            <div class="col-lg-3 col-md-12">
-                <form action="#" method="post" class="sidebar">
-                    <h4>Filters</h4>
-                    <div>
-                        <select title="Service" class="wide">
-                                <option selected >Select Institution Type</option>
-                                <option data-display="Select">Nursery & Primary School</option>
-                                <option value="1">Secondary Schools</option>
-                                <option value="2">Higher Institutions</option>
-                                <option value="3" disabled>Others</option>
-                                <option value="4">All</option>
-                        </select>
-                        <select title="Service" class="wide">
-                                <option selected >Select City</option>
-                                <option data-display="Select">Abuja</option>
-                                <option value="1">Lagos</option>
-                                <option value="2">Benin</option>
-                                <option value="3" disabled>Ibadan</option>
-                                <option value="4">All</option>
-                        </select>
-                    </div>
-                    <button class="btn ui-btn btn-block dark-blue">Update</button>
-                </form>
-            </div>
+            {{/each}}
         </div>
         <div class="ui-pagination">
             <a href="#" class="page"><i class="fa fa-angle-left"></i></a>

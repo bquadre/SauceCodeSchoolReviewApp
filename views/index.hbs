@@ -169,7 +169,7 @@
     <div class="banner-content">
         <h1 class="banner-title">Help Us Review Schools in your Area</h1>
         <p>THIS IS A PLATFORM WHERE STUDENTS AND OTHER STAKEHOLDERS CAN ANONYMOUSLY REVIEW SCHOOLS AND THEIR MANAGEMENT</p>
-
+        <form method="post" action="/search" >
         <div class="select-fields">
             <div class="sel">
                 <select title="Service" class="wide">
@@ -183,17 +183,49 @@
             </div>
             <div class="sel">
                 <select title="Service" class="wide">
-                    <option selected >Select City</option>
-                    <option data-display="Select">Abuja</option>
-                    <option value="1">Lagos</option>
-                    <option value="2">Benin</option>
-                    <option value="3" disabled>Ibadan</option>
-                    <option value="4">All</option>
+                    <option >Select a State</option>
+                                            <option value="Abia">Abia</option>
+                                            <option value="Adamawa">Adamawa</option>
+                                            <option value="Anambra">Anambra</option>
+                                            <option value="Akwa Ibom">Akwa Ibom</option>
+                                            <option value="Bauchi">Bauchi</option>
+                                            <option value="Bayelsa">Bayelsa</option>
+                                            <option value="Benue">Benue</option>
+                                            <option value="Borno">Borno</option>
+                                            <option value="Cross River">Cross River</option>
+                                            <option value="Delta">Delta</option>
+                                            <option value="Ebonyi">Ebonyi</option>
+                                            <option value="Enugu">Enugu</option>
+                                            <option value="Edo">Edo</option>
+                                            <option value="Ekiti">Ekiti</option>
+                                            <option value="Gombe">Gombe</option>
+                                            <option value="Imo">Imo</option>
+                                            <option value="Jigawa">Jigawa</option>
+                                            <option value="Kaduna">Kaduna</option>
+                                            <option value="Kano">Kano</option>
+                                            <option value="Katsina">Katsina</option>
+                                            <option value="Kebbi">Kebbi</option>
+                                            <option value="Kogi">Kogi</option>
+                                            <option value="Kwara">Kwara</option>
+                                            <option value="Lagos">Lagos</option>
+                                            <option value="Nasarawa">Nasarawa</option>
+                                            <option value="Niger">Niger</option>
+                                            <option value="Ogun">Ogun</option>
+                                            <option value="Ondo">Ondo</option>
+                                            <option value="Osun<">Osun</option>
+                                            <option value="Oyo">Oyo</option>
+                                            <option value="Plateau">Plateau</option>
+                                            <option value="Rivers">Rivers</option>
+                                            <option value="Sokoto">Sokoto</option>
+                                            <option value="Taraba">Taraba</option>
+                                            <option value="Yobe">Yobe</option>
+                                            <option value="Zamfara">Zamfara</option>
+                                            <option value="Abuja - FCT">Abuja - FCT </option>
                 </select>
             </div>
             <button class="btn ui-btn dark-blue">Search</button>
         </div>
-
+        </form>
     </div>
 
 </div>
@@ -233,8 +265,9 @@
 
 <!--top rated-->
 <div class="top-rated">
-    <h3 class="text-center">Top Rated Schools</h3>
+    <h3 class="text-center">Last Added Schools</h3>
     <div class="row">
+        {{#each last}}
         <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="user-card">
                 <div class="top">
@@ -243,18 +276,18 @@
                         <span><i class="fa fa-star text-rose"></i></span>
                     </div>
                     <div class="user-details">
-                        <h6 class="name">Unilag</h6>
+                        <h6 class="name"> {{name}} </h6>
                         <!-- <div class="em-web">
                             <span>@susanm</span>
                             <span>|</span>
                             <span>merly.com</span>
                         </div> -->
-                        <div class="location"><strong>Lagos</strong></div>
+                        <div class="location"><strong> {{location}} </strong></div>
                     </div>
                     <div class="user-counts">
                         <div class="count-item">
                             <i class="fa fa-eye text-info"></i>
-                            <strong>1241</strong>
+                            <strong> {reviews} </strong>
                         </div>
                         <div class="count-item">
                             <i class="fa fa-heart text-mayan"></i>
@@ -262,152 +295,21 @@
                         </div>
                         <div class="count-item">
                             <i class="fa fa-pencil-square-o text-rose"></i>
-                            <strong>569</strong>
+                            <strong>{{comments.length}}</strong>
                         </div>
                     </div>
                 </div>
                 <div class="center">
                     <p>
-                        Brief School Description
-                        Short ribs cow pork chop itin pancetta sage jerky
-                        bresaola frankfurter swine ribeye pork loin.
-                        Leberkas ham.
+                        {{description}}
                     </p>
                 </div>
                 <div class="bottom info">
-                   <a class ="btn" href="list.html"><strong>See All</strong></a> 
+                    <a class ="btn" href="/schools/{{_id}}"><strong>See All</strong></a> 
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="user-card">
-                <div class="top">
-                    <div class="user-photo">
-                        <div><img src="/img/user2.jpg" alt=""></div>
-                        <span><i class="fa fa-star text-rose"></i></span>
-                    </div>
-                    <div class="user-details">
-                        <h6 class="name">Convenant University</h6>
-                        <!-- <div class="em-web">
-                            <span>@randon</span>
-                            <span>|</span>
-                            <span>bzen.com</span>
-                        </div> -->
-                        <div class="location"><strong>Otta</strong></div>
-                    </div>
-                    <div class="user-counts">
-                            <div class="count-item">
-                                <i class="fa fa-eye text-info"></i>
-                                <strong>1241</strong>
-                            </div>
-                            <div class="count-item">
-                                <i class="fa fa-heart text-mayan"></i>
-                                <strong>786</strong>
-                            </div>
-                            <div class="count-item">
-                                <i class="fa fa-pencil-square-o text-rose"></i>
-                                <strong>569</strong>
-                            </div>
-                    </div>
-                </div>
-                <div class="center">
-                    <p>
-                        Short ribs cow pork chop itin pancetta sage jerky
-                        bresaola frankfurter swine ribeye pork loin.
-                        Leberkas ham.
-                    </p>
-                </div>
-                <div class="bottom info">
-                        <a class ="btn" href="list.html"><strong>See All</strong></a> 
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="user-card">
-                <div class="top">
-                    <div class="user-photo">
-                        <div><img src="/img/avatar2.jpg" alt=""></div>
-                        <span><i class="fa fa-star"></i></span>
-                    </div>
-                    <div class="user-details">
-                        <h6 class="name">ICAN Training</h6>
-                        <!-- <div class="em-web">
-                            <span>@carol</span>
-                            <span>|</span>
-                            <span>mitc.com</span>
-                        </div> -->
-                        <div class="location"><strong>Abuja</strong></div>
-                    </div>
-                    <div class="user-counts">
-                            <div class="count-item">
-                                <i class="fa fa-eye text-info"></i>
-                                <strong>1241</strong>
-                            </div>
-                            <div class="count-item">
-                                <i class="fa fa-heart text-mayan"></i>
-                                <strong>786</strong>
-                            </div>
-                            <div class="count-item">
-                                <i class="fa fa-pencil-square-o text-rose"></i>
-                                <strong>569</strong>
-                            </div>
-                    </div>
-                </div>
-                <div class="center">
-                    <p>
-                        Short ribs cow pork chop itin pancetta sage jerky
-                        bresaola frankfurter swine ribeye pork loin.
-                        Leberkas ham.
-                    </p>
-                </div>
-                <div class="bottom info">
-                    <a class ="btn" href="list.html"><strong>See All</strong></a> 
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="user-card">
-                <div class="top">
-                    <div class="user-photo">
-                        <div><img src="img/user.jpg" alt=""></div>
-                        <span><i class="fa fa-star text-rose"></i></span>
-                    </div>
-                    <div class="user-details">
-                        <h6 class="name">Steph Driving School</h6>
-                        <!-- <div class="em-web">
-                            <span>@jacki</span>
-                            <span>|</span>
-                            <span>rozov.com</span>
-                        </div> -->
-                        <div class="location"><strong>Lokoja</strong></div>
-                    </div>
-                    <div class="user-counts">
-                            <div class="count-item">
-                                <i class="fa fa-eye text-info"></i>
-                                <strong>1241</strong>
-                            </div>
-                            <div class="count-item">
-                                <i class="fa fa-heart text-mayan"></i>
-                                <strong>786</strong>
-                            </div>
-                            <div class="count-item">
-                                <i class="fa fa-pencil-square-o text-rose"></i>
-                                <strong>569</strong>
-                            </div>
-                    </div>
-                </div>
-                <div class="center">
-                    <p>
-                        Short ribs cow pork chop itin pancetta sage jerky
-                        bresaola frankfurter swine ribeye pork loin.
-                        Leberkas ham.
-                    </p>
-                </div>
-                <div class="bottom info">
-                        <a class ="btn" href="list.html"><strong>See All</strong></a> 
-                </div>
-            </div>
-        </div>
+        {{/each}}
     </div>
 </div>
 <!--end top rated-->

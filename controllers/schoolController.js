@@ -9,8 +9,9 @@ export default class SchoolController {
                     .send({message: "Some error occurred while retrieving schools."})
                     .redirect('index');
             } else {
-                res.render('index', {schools});
-                console.log(schools)
+                const last = schools.slice(Math.max(schools.length - 4, 1))
+                res.render('index', {last});
+                console.log(last)
             }
         });
     }
@@ -65,6 +66,7 @@ export default class SchoolController {
     }
 
     addComment(req, res){
+        const searchFields =[req.body.location, req.body.type]
         School.findById(req.params.SchoolId, (err, school) => {  
             if (err) {
                 res.status(500).send(err)
@@ -153,6 +155,14 @@ export default class SchoolController {
     }
 
     searchSchool(req, res){
-        
+        School.find({$or:[{location: req.body.location},{type:req.body.type}]},
+            (err, results) => {
+                if(err){
+                    console.log(err)
+                }
+                    console.log(results);
+                    res.render('list', {title:'search results', results});
+        });
     }
 }
+

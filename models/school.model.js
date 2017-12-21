@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-
+import searchPlugin from 'mongoose-search-plugin';
 
 const SchoolSchema = mongoose.Schema({
     name: {type: String, required: true},
@@ -34,6 +34,10 @@ const SchoolSchema = mongoose.Schema({
 },
 {
     timestamps: true 
+});
+
+SchoolSchema.plugin(searchPlugin, {
+    fields: ['type', 'location']
 });
 
 export default mongoose.model('School', SchoolSchema);
