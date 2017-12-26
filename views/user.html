@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><head>
+
+    <!--meta tags-->
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Services Listing HTML5 CSS3 template">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript, services, listing">
+    <meta name="author" content="Ui-DesignLab">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--end meta tags-->
+
+    <title>Welcome Username</title>
+
+    <!--stylesheets-->
+
+    <link rel="stylesheet" href="3rdparty/css/bootstrap.min.css">
+    <link rel="stylesheet" href="3rdparty/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="3rdparty/css/animate.min.css">
+    <link rel="stylesheet" href="3rdparty/jquery-nice-select-1.1.0/css/nice-select.css">
+    <link rel="stylesheet" href="3rdparty/OwlCarousel2-2.2.1/owl.carousel.min.css">
+    <link rel="stylesheet" href="3rdparty/OwlCarousel2-2.2.1/owl.theme.green.min.css">
+    <link rel="stylesheet" href="3rdparty/perfect-scrollbar/css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <!--end stylesheets-->
+
+    <!--google fonts-->
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:700|Raleway|Tangerine" rel="stylesheet">
+    <!--end google fonts-->
+
+
+</head>
+<body>
+<!-- Add New School Modal -->
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add New School</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="auth-wrapper">
+                        <div class="form-tabs">
+                            <a href="#" data-frm="login-frm" class="tab active">Kindly Fill the Form Below</a>
+                        </div>
+                        <form class="login-frm frm" action="#" method="post">
+                            <div class="form-group">
+                                <label for="email1">Name of School:</label>
+                                <input type="text" required name="name" autocomplete="email" id="#">
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Upload Image</label>
+                                <input type="file" name="myfile" />
+                            </div>
+                            <div class="form-group">
+                                    <label for="email">Your Email Address:</label>
+                                    <input type="email" required name="email" autocomplete="email" id="#">
+                            </div>
+                            <div class="form-group">
+                                <label for="pass1">Type of Institution</label>
+                                <div class="sel">
+                                        <select title="Service" class="wide">
+                                            <option selected >Select Institution Type</option>
+                                            <option data-display="Select">Nursery & Primary School</option>
+                                            <option value="1">Secondary School</option>
+                                            <option value="2">Higher Institution</option>
+                                            <option value="3">Others</option>
+                                        </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email1">Address:</label>
+                                <input type="text" required name="address" autocomplete="email" id="#">
+                            </div>
+                            <div class="form-group">
+                                    <label for="email1">Location</label>
+                                    <div class="sel">
+                                        <select title="Service" class="wide">
+                                            <option selected >Select a State</option>
+                                            <option data-display="Select">Abia</option>
+                                            <option value="#">Adamawa</option>
+                                            <option value="#">Anambra</option>
+                                            <option value="#">Akwa Ibom</option>
+                                            <option value="#">Bauchi</option>
+                                            <option value="#">Bayelsa</option>
+                                            <option value="#">Benue</option>
+                                            <option value="#">Borno</option>
+                                            <option value="#">Cross River</option>
+                                            <option value="#">Delta</option>
+                                            <option value="#">Ebonyi</option>
+                                            <option value="#">Enugu</option>
+                                            <option value="#">Edo</option>
+                                            <option value="#">Ekiti</option>
+                                            <option value="#">Gombe</option>
+                                            <option value="#">Imo</option>
+                                            <option value="#">Jigawa</option>
+                                            <option value="#">Kaduna</option>
+                                            <option value="#">Kano</option>
+                                            <option value="#">Katsina</option>
+                                            <option value="#">Kebbi</option>
+                                            <option value="#">Kogi</option>
+                                            <option value="#">Kwara</option>
+                                            <option value="#">Lagos</option>
+                                            <option value="#">Nasarawa</option>
+                                            <option value="#">Niger</option>
+                                            <option value="#">Ogun</option>
+                                            <option value="#">Ondo</option>
+                                            <option value="#">Osun</option>
+                                            <option value="#">Oyo</option>
+                                            <option value="#">Plateau</option>
+                                            <option value="#">Rivers</option>
+                                            <option value="#">Sokoto</option>
+                                            <option value="#">Taraba</option>
+                                            <option value="#">Yobe</option>
+                                            <option value="#">Zamfara</option>
+                                            <option value="#">Abuja - FCT </option>
+
+                                        </select>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">School's Description:</label>
+                                <textarea class="form-control">Enter Details for school here</textarea>
+                            </div>
+                            <br>
+                            <hr>
+                            <div class="form-tabs">
+                                <a href="#" data-frm="register-frm" class="tab">Other Details</a>
+                            </div>
+                            <div class="form-group">
+                                <label for="email1">Schools Email:</label>
+                                <input type="email" name="email" autocomplete="email" id="email1">
+                            </div>
+                            <div class="form-group">
+                                <label for="email1">Schools Number:</label>
+                                <input type="text" name="schnum" autocomplete="email" id="email1">
+                            </div>
+                           <br>
+                            <div class="sub-btn">
+                                <input type="submit" class="btn ui-btn info" value="SUBMIT FOR REVIEW">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- end of Add New School Modal -->
+
+<!--top bar-->
+<div class="top-bar">
+    <div class="slide-container">
+        <div class="top-strip">
+            <i class="fa fa-angle-left fa-2x side-nav-toggle"></i>
+        </div>
+        <div class="bottom-strip">
+            <h5>Welcome <span>User</span></h5>
+        </div>
+    </div>
+</div>
+<!--end top bar-->
+
+<!--side menu-->
+<div class="side-nav">
+    <div class="dash-logo">
+        <i class="fa fa-times cls-nav"></i>
+        <h2>School Review</h2>
+    </div>
+    <div class="links-container">
+        <div class="panel-user">
+            <strong>User</strong>
+        </div>
+        <ul class="list-unstyled dash-links">
+            <li><a href="#" class="active"><i class="fa fa-th-large"></i> <span> My Dashboard</span></a></li>
+        </ul>
+        <div class="logout"><a href="index.html">Logout</a></div>
+    </div>
+</div>
+<!--end side menu-->
+
+<!--dashboard content-->
+<div class="slide-container">
+    <div class="dashboard-content">
+
+        <!--statistics-->
+        <div class="statistics">
+            <div class="row">
+                <div class="col-lg-3 col-md-4">
+                    <div class="stat">
+                        <h1>621 <span>Views</span></h1>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="stat">
+                        <h1>153 <span>Reviews</span></h1>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="stat">
+                        <h1>756 <span>Likes</span></h1>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="stat">
+                        <h1>17 <span>Dislikes</span></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end statistics-->
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="holder">
+                    <div class="graph">
+                        <button class="btn ui-btn info" data-toggle="modal" data-target="#Modal">Add New Listing</button><br><hr><br>
+                        <h3>My Listings</h3><hr>
+                        <div class="row card-deck">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title">Listing One</h4>
+                                            <hr/>
+                                        </a>
+                                        <p class="card-text">Lorem ispum lorem ispum lorem ispim lorem ispum lorem ispim lorem sosos fmffmfnod kdoe lorem ispum lorem ispulm
+                                            lssumr.
+                                        </p>
+                                        <p><i class="fa fa-clock-o" aria-hidden="true"></i>
+                                            <span>3 hors ago</span>
+                                        </p>
+                                        <div>
+                                            <a href="#" class="btn btn-outline-success" data-toggle="modal" data-target="#Edit">Edit</a>
+                                            <a href="#" class="btn btn-outline-danger" data-toggle="modal" data-target="#Delete">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--dashboard footer-->
+        <div class="dash-footer">
+            <span><p class="copyright footer-logo"><i  class="fa fa-copyright"></i> 2017 Saucecode.
+                Developed with <i class="fa fa-heart text-info"></i>&nbsp; by <a href="https://github.com/seunzone"><strong>Seun</strong></a> and <a href="https://github.com/leksyib"><strong>Lekan</strong></a></p>
+                </div>
+        <!--end dashboard footer-->
+
+    </div>
+</div>
+<!--end dashboard content-->
+
+<!--Edit and Delete Modals -->
+
+<!-- Edit School Modal -->
+<div class="modal fade" id="Edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit School</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="auth-wrapper">
+                        <div class="form-tabs">
+                            <a href="#" data-frm="login-frm" class="tab active">Kindly Fill the Form Below</a>
+                        </div>
+                        <form class="login-frm frm" action="#" method="post">
+                            <div class="form-group">
+                                <label for="email1">Name of School:</label>
+                                <input type="text" required name="name" autocomplete="email" id="#">
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Upload Image</label>
+                                <input type="file" name="myfile" />
+                            </div>
+                            <div class="form-group">
+                                    <label for="email">Your Email Address:</label>
+                                    <input type="email" required name="email" autocomplete="email" id="#">
+                            </div>
+                            <div class="form-group">
+                                <label for="pass1">Type of Institution</label>
+                                <div class="sel">
+                                        <select title="Service" class="wide">
+                                            <option selected >Select Institution Type</option>
+                                            <option data-display="Select">Nursery & Primary School</option>
+                                            <option value="1">Secondary School</option>
+                                            <option value="2">Higher Institution</option>
+                                            <option value="3">Others</option>
+                                        </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email1">Address:</label>
+                                <input type="text" required name="address" autocomplete="email" id="#">
+                            </div>
+                            <div class="form-group">
+                                    <label for="email1">Location</label>
+                                    <div class="sel">
+                                        <select title="Service" class="wide">
+                                            <option selected >Select a State</option>
+                                            <option data-display="Select">Abia</option>
+                                            <option value="#">Adamawa</option>
+                                            <option value="#">Anambra</option>
+                                            <option value="#">Akwa Ibom</option>
+                                            <option value="#">Bauchi</option>
+                                            <option value="#">Bayelsa</option>
+                                            <option value="#">Benue</option>
+                                            <option value="#">Borno</option>
+                                            <option value="#">Cross River</option>
+                                            <option value="#">Delta</option>
+                                            <option value="#">Ebonyi</option>
+                                            <option value="#">Enugu</option>
+                                            <option value="#">Edo</option>
+                                            <option value="#">Ekiti</option>
+                                            <option value="#">Gombe</option>
+                                            <option value="#">Imo</option>
+                                            <option value="#">Jigawa</option>
+                                            <option value="#">Kaduna</option>
+                                            <option value="#">Kano</option>
+                                            <option value="#">Katsina</option>
+                                            <option value="#">Kebbi</option>
+                                            <option value="#">Kogi</option>
+                                            <option value="#">Kwara</option>
+                                            <option value="#">Lagos</option>
+                                            <option value="#">Nasarawa</option>
+                                            <option value="#">Niger</option>
+                                            <option value="#">Ogun</option>
+                                            <option value="#">Ondo</option>
+                                            <option value="#">Osun</option>
+                                            <option value="#">Oyo</option>
+                                            <option value="#">Plateau</option>
+                                            <option value="#">Rivers</option>
+                                            <option value="#">Sokoto</option>
+                                            <option value="#">Taraba</option>
+                                            <option value="#">Yobe</option>
+                                            <option value="#">Zamfara</option>
+                                            <option value="#">Abuja - FCT </option>
+
+                                        </select>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">School's Description:</label>
+                                <textarea class="form-control">Enter Details for school here</textarea>
+                            </div>
+                            <br>
+                            <hr>
+                            <div class="form-tabs">
+                                <a href="#" data-frm="register-frm" class="tab">Other Details</a>
+                            </div>
+                            <div class="form-group">
+                                <label for="email1">Schools Email:</label>
+                                <input type="email" name="email" autocomplete="email" id="email1">
+                            </div>
+                            <div class="form-group">
+                                <label for="email1">Schools Number:</label>
+                                <input type="text" name="schnum" autocomplete="email" id="email1">
+                            </div>
+                           <br>
+                            <div class="sub-btn">
+                                <input type="submit" class="btn ui-btn info" value="SUBMIT FOR REVIEW">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- end of Edit School Modal -->
+
+  <!-- Delete MODAL -->
+  <div class="modal fade" id="Delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Delete Listing</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Are you sure you want to delete this listing?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Agree</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- delete MODAL ENDS -->
+    <!-- End of Modals -->
+
+<script src="3rdparty/js/jquery-3.2.1.min.js"></script>
+<script src="3rdparty/js/popper.js"></script>
+<script src="3rdparty/js/bootstrap.js"></script>
+<script src="3rdparty/jquery-nice-select-1.1.0/js/jquery.nice-select.js"></script>
+<script src="3rdparty/OwlCarousel2-2.2.1/owl.carousel.min.js"></script>
+<script src="3rdparty/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
+<script src="3rdparty/js/Chart.bundle.js"></script>
+<script src="3rdparty/js/utils.js"></script>
+<script src="js/app.js"></script>
+<script src="js/graph.js"></script>
+
+</body>
+
+</html>
