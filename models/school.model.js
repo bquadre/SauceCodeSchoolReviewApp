@@ -3,7 +3,7 @@ import searchPlugin from 'mongoose-search-plugin';
 
 const SchoolSchema = mongoose.Schema({
     name: {type: String, required: true},
-    fees: {type: String, required: true},
+    fees: {type: String, required: false},
     location: {type: String, required: true},
     address: {type: String, required: true},
     description: {type: String, required: true},
@@ -31,7 +31,10 @@ const SchoolSchema = mongoose.Schema({
             issue: String
         }
     ],
+    photo: String,
+    author: { type: mongoose.Schema.ObjectId, ref: 'User'}
 },
+
 {
     timestamps: true 
 });

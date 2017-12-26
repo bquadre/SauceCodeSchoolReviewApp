@@ -25,11 +25,9 @@ db.once('open',  () => {
 app.use(session({
     secret: 'work hard',
     resave: true,
-    saveUninitialized: false,
-    store: new MongoStore({
-        mongooseConnection: db
-    })
+    saveUninitialized: false
 }));
+
 // set view engine to Handlebars
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views')) // this is the folder where we keep our ejs files
