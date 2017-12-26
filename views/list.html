@@ -36,7 +36,7 @@
 </head>
 <body> 
 <!-- Add New School Modal -->
-<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -153,15 +153,77 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- end of Add New School Modal -->
+
+<!-- Login/register Modal -->
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">My Account</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="auth-wrapper">
+                        <div class="form-tabs">
+                            <a href="#" data-frm="login-frm" class="tab active">Login</a>
+                            <a href="#" data-frm="register-frm" class="tab">Register</a>
+                        </div>
+                        <form class="login-frm frm" action="#" method="post">
+                            <div class="form-group">
+                                <label for="email1">Email:</label>
+                                <input type="email" required name="email" autocomplete="email" id="email1">
+                            </div>
+                            <div class="form-group">
+                                <label for="pass1">Password:</label>
+                                <input type="password" required name="password" id="pass1">
+                            </div>
+                            <div class="remember-me">
+                                <div>
+                                    <input type="checkbox" id="test1" />
+                                    <label for="test1">Remember Me</label>
+                                </div>
+                                <a href="#">Forgot Password?</a>
+                            </div>
+                            <div class="sub-btn">
+                                <input type="submit" class="btn ui-btn info" value="SIGN IN">
+                            </div>
+                        </form>
+                        <form class="register-frm frm hide" action="#" method="post">
+                            <div class="form-group">
+                                <label for="email2">Email:</label>
+                                <input type="email" required name="email" autocomplete="email" id="email2">
+                            </div>
+                            <div class="form-group">
+                                <label for="pass3">Password:</label>
+                                <input type="password" required name="password" id="pass3">
+                            </div>
+                            <div class="form-group">
+                                <label for="pass2">Confirm Password:</label>
+                                <input type="password" required name="password" id="pass2">
+                            </div>
+                            <div class="sub-btn">
+                                <input type="submit" class="btn ui-btn info" value="REGISTER">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Login/register Modal -->
 
 <!--top navbar-->
 <nav class="ui-nav">
     <div class="logo"><a href="index.html">School Review</a></div>
     <div class="start-here">
         <div class="start-here">
-                <a href="#" class="btn ui-btn info" data-toggle="modal" data-target="#Modal">Add New School</a>
+                <a href="#" class="btn ui-btn info" data-toggle="modal" data-target="#Modal">Sign in / Register</a>
         </div>
     </div>
     <i class="fa fa-bars open-menu"></i>
