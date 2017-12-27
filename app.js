@@ -11,7 +11,6 @@ const app = express();
 
 
 //connect to MongoDB
-mongoose.connect('mongodb://leks:leks@ds141796.mlab.com:41796/goodschools');
 const db = mongoose.connection;
 
 //handle mongo error
